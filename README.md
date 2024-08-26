@@ -2,6 +2,10 @@
 
 ### 🚀 Versión: 0.0.0
 
+## 🌟 ¡Mira el Demo en Vivo!
+
+¡Descubre la aplicación en acción y explora todas sus funcionalidades! Puedes ver la versión en vivo del proyecto en [Netlify](https://skandia.netlify.app/). 🚀✨
+
 ## 📖 Descripción
 **Skandia Financial** es una aplicación web de vanguardia desarrollada con Angular. Ofrece herramientas robustas para la gestión financiera y una experiencia de usuario fluida, combinando un diseño moderno con funcionalidades poderosas.
 
