@@ -21,6 +21,7 @@ export class SliderComponent implements OnInit, AfterViewInit {
   cardWidth: number = 0;
   isPrevDisabled: boolean = true;
   isNextDisabled: boolean = false;
+  visibleCards: SliderData[] = [];
   constructor(
     private sliderService: SliderService,
     private bannerService: BannerService
@@ -41,7 +42,11 @@ export class SliderComponent implements OnInit, AfterViewInit {
           return of([]); // Return an empty array in case of error
         })
       )
-      .subscribe((data: SliderData[]) => (this.cards = data));
+      .subscribe((data: SliderData[]) => {
+        this.cards = data;
+        this.visibleCards = [...this.cards, this.getStaticCard()];
+        this.updateButtonStates();
+      });
   }
 
   /**
@@ -86,7 +91,7 @@ export class SliderComponent implements OnInit, AfterViewInit {
    * Ensures that the scroll position does not exceed the maximum scroll limit and updates button states.
    */
   nextSlide(): void {
-    const maxScroll = (this.cards.length - 1) * this.cardWidth;
+    const maxScroll = (this.visibleCards.length - 1) * this.cardWidth;
     this.scrollPosition += this.cardWidth;
     if (this.scrollPosition > maxScroll) {
       this.scrollPosition = maxScroll;
@@ -99,9 +104,9 @@ export class SliderComponent implements OnInit, AfterViewInit {
    * Disables the 'Previous' button if at the start and the 'Next' button if at the end.
    */
   updateButtonStates(): void {
-    const maxScroll = (this.cards.length - 1) * this.cardWidth;
+    const maxScroll = (this.visibleCards.length - 1) * this.cardWidth;
     this.isPrevDisabled = this.scrollPosition === 0;
-    this.isNextDisabled = this.scrollPosition === maxScroll;
+    this.isNextDisabled = this.scrollPosition >= maxScroll;
   }
 
   /**
@@ -118,5 +123,19 @@ export class SliderComponent implements OnInit, AfterViewInit {
     };
 
     return iconMap[productName] || 'assets/img/Happy.svg';
+  }
+
+  /**
+   * Returns a static card with a predefined icon.
+   * @returns A static card object.
+   */
+  getStaticCard(): SliderData {
+    return {
+      nameProduct: 'Explora',
+      numberProduct: '',
+      balanceProduct: '',
+      detaildProduct: '',
+      icon: '/assets/img/Group_12973@2x.png',
+    } as SliderData;
   }
 }

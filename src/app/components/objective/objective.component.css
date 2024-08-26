@@ -7,10 +7,3 @@
   background-position: bottom;
 }
 
-@media (max-width: 320px) {
-  .sm-resp{
-    margin-top: -240px;
-  }
-}
-
-

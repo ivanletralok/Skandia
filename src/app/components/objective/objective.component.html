@@ -4,22 +4,25 @@
   </div>
 
   <div
-    class="relative z-10 background h-[45vh] bg-green-200 flex flex-col items-center pt-6 sm:pt-12 md:pt-16 lg:pt-32">
+    class="relative z-10 background h-[45vh] bg-green-200 flex flex-col items-center pt-20 sm:pt-36 md:pt-20 xl:pt-24 ">
+    <div class="w-4/5 flex justify-start font-Verdana font-bold text-xs underline text-white">
+      <span class="mr-2 sm:block min-[320px]:hidden block"><img src="/assets/img/home_2.svg" alt="Home Icon"></span>
+      <span class="cursor-pointer sm:block min-[320px]:hidden block"> Ir al inicio</span>
+    </div>
 
-    <div class="w-4/5 flex justify-start font-Verdana font-bold text-xs underline text-white"><span
-        class="flex gap-2 cursor-pointer"><img src="/assets/img/home_2.svg"> Ir al inicio</span></div>
-    <p class="text-white sm:text-xl md:text-2xl lg:text-2xl font-montserrat font-bold text-center mt-8 sm:mt-1">
-      {{ firstSectionText.successMessage }}
-    </p>
-    <p class="text-slate-100 text-sm sm:text-base md:text-lg lg:text-base font-Verdana text-center mt-4 sm:mt-1">
-      {{ firstSectionText.emailNotification }}
-    </p>
+    <div class="sm:mt-8">
+      <p class="text-white sm:text-xl md:text-2xl lg:text-2xl font-montserrat font-bold text-center sm:t-1">
+        {{ firstSectionText.successMessage }}
+      </p>
+      <p class="text-slate-100 text-sm sm:text-base md:text-lg lg:text-base font-Verdana text-center sm:mt- ">
+        {{ firstSectionText.emailNotification }}
+      </p>
+    </div>
 
   </div>
 
-  <div class="relative z-10 imgback items-center justify-center h-[85vh] mb-[-2rem] sm:mb-[-3rem]">
-    <div
-      class="text-center text-custom-black font-montserrat flex flex-col items-center pt-12 sm:pt-16 md:pt-20 lg:pt-52">
+  <div class="relative z-10 items-center justify-center min-[320px]:mt-52 sm:m-0 lg:h-[85vh] xl:h-[36vh] ">
+    <div class="text-center text-custom-black font-montserrat flex flex-col items-center  sm:pt-32  lg:mt-20 ">
       <p class="sm:text-xl md:text-2xl lg:text-2xl font-bold">
         {{ secondSectionText.goalMessage }}
         <span class="text-orange-400">{{ secondSectionText.amount }}</span>
@@ -32,22 +35,22 @@
         <br />
         <span class="font-bold text-xs sm:text-sm md:text-base lg:text-lg flex justify-center gap-1">
           {{ secondSectionText.actionPrompt }}
-          <img src="/assets/img/Group_12953.svg" alt="">
+          <img src="/assets/img/Group_12953.svg" class="min-[320px]:hidden block">
         </span>
       </p>
     </div>
   </div>
 
   <div
-    class="absolute left-1/2 transform -translate-x-1/2 bg-white w-[90%] sm:w-4/5 md:w-2/3 lg:w-2/5 h-auto max-w-[91vw] md:h-[37vh] shadow-lg rounded-xl top-[27vh] sm:top-[27vh] md:top-[27vh] lg:top-[30vh] z-20">
+    class="absolute left-1/2 transform -translate-x-1/2 bg-white w-[90%] sm:w-4/5 md:w-2/3 lg:w-2/5 h-auto max-w-[91vw] md:h-[37vh] shadow-lg rounded-xl top-[27vh] sm:top-[34vh] md:top-[27vh] lg:top-[29vh] min-[320px]:text-xs  z-20">
     <app-review-objetive></app-review-objetive>
   </div>
 
-  <div class="sm-resp  relative z-20 mt-[-18rem] lg:px-14">
+  <div class="relative z-20 min-[320px]:-mt-56 md:mt-6 lg:-mt-80  lg:mx-28 xl:mt-0">
     <app-slider></app-slider>
     <div class="flex justify-center mt-10 pb-10">
       <input
-        class="text-base bg-gray-200 w-full sm:w-1/2 md:w-1/4 rounded-full p-3 font-montserrat font-bold text-custom-black"
+        class="text-base bg-gray-200 w-full sm:w-1/2 md:w-1/4 rounded-full p-3 font-montserrat font-bold text-custom-black min-[320px]:m-6 "
         type="button" value="ASOCIAR OBJETIVO">
     </div>
   </div>

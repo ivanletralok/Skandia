@@ -1,4 +1,4 @@
-<div class="relative w-full overflow-hidden">
+<div class="custom-margin-top relative w-full overflow-hidden md:mt-0 min-[320px]:mt-60  ">
   <div class="flex transition-transform duration-500 ease-in-out" [style.transform]="getTransform()">
     <div class="flex-none w-full sm:w-1/2 md:w-2/6 lg:w-2/6 xl:w-1/4 p-2" *ngFor="let card of cards">
       <div class="card bg-white rounded-lg shadow-md p-4 border hover:border-Verdana mx-auto">
@@ -29,10 +29,10 @@
       </div>
     </div>
 
-    <div class="flex-none w-full sm:w-1/2 md:w-2/6 lg:w-2/6 xl:w-1/4 p-2">
+    <div class="flex-none w-full sm:w-1/2 md:w-2/6 lg:w-2/6 xl:w-1/4 p-2 rounded-lg">
       <div class="card rounded-lg shadow-md border hover:border-Verdana hover:border-2 mx-auto">
         <div class="relative w-full h-auto rounded-md">
-          <img src="/assets/img/Group_12973@2x.png" alt="Group" class="w-full h-4/5">
+          <img src="/assets/img/Group_12973@2x.png" alt="Group" class="w-full h-96">
           <button (click)="onButtonClick()"
             class="bg-Verdana absolute z-50 text-white font-montserrat text-sm font-bold rounded-full p-2 transform  underline left-6 top-1/3 ">
             EXPLORA AHORA
