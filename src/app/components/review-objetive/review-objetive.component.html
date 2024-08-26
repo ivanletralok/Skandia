@@ -1,0 +1,59 @@
+<!-- Header Section -->
+<div class="flex p-4 sm:p-5 md:p-6 lg:p-6 justify-between items-center">
+  <div class="font-montserrat font-bold text-custom-black sm:text-xl md:text-xl lg:text-lg">
+    <p>{{ headerText.mainTitle }}</p>
+    <p class="text-custom-black sm:text-sm md:text-sm lg:text-xs font-Verdana font-bold">
+      {{ headerText.category }}
+    </p>
+  </div>
+  <div>
+    <span class="font-montserrat text-Verdana sm:text-base md:text-base lg:text-base font-bold underline">
+      {{ headerText.reviewGoal }}
+    </span>
+  </div>
+</div>
+
+<div
+  class="flex flex-col sm:flex-row md:flex-row pl-4 sm:pl-5 md:pl-7 lg:pl-5 pr-4 sm:pr-5 md:pr-7 lg:pr-7 space-y-4 sm:space-y-0 sm:space-x-4 md:space-x-6 lg:space-x-14 justify-between">
+  <div class="flex-1 text-custom-black sm:text-sm md:text-sm font-Verdana">
+    <span class="flex p-2 justify-center text-xs sm:text-sm md:text-sm">{{ dataSectionText.firstBox.label }}</span>
+    <span
+      class="flex w-full p-1 justify-center font-montserrat font-bold text-custom-black text-xs sm:text-sm md:text-sm bg-custom-blue rounded-md">
+      {{ dataSectionText.firstBox.date }}
+    </span>
+  </div>
+
+  <div class="flex-1 text-custom-black text-xs sm:text-sm md:text-sm font-Verdana">
+    <span class="flex p-2 justify-center">{{ dataSectionText.secondBox.label }}</span>
+    <span
+      class="flex w-full p-1 justify-center font-montserrat font-bold text-custom-black text-xs sm:text-sm md:text-sm bg-orange-300 rounded-md">
+      {{ dataSectionText.secondBox.amount }}
+    </span>
+  </div>
+
+  <div class="flex-1 text-custom-black text-xs sm:text-sm md:text-sm font-Verdana">
+    <span class="flex justify-center p-2">
+      <img src="/assets/img/Icon-awesome-star.svg" alt="star" class="mr-1 mt-1 h-2 sm:h-2 md:h-2" />
+      <span class="">{{ dataSectionText.thirdBox.label }}</span>
+    </span>
+    <span
+      class="flex w-full justify-center p-1 font-montserrat font-bold text-custom-black text-xs sm:text-sm md:text-sm bg-custom-green rounded-md">
+      {{ dataSectionText.thirdBox.amount }}
+    </span>
+  </div>
+</div>
+
+<div class="flex pl-4 sm:pl-5 md:pl-7 lg:pl-7 justify-between items-center">
+  <div class="flex w-full items-center">
+    <span class="flex items-center mr-1">
+      <img src="/assets/img/Icon-awesome-check-circle.svg" alt="check" class="h-2 sm:h-4 md:h-4" />
+    </span>
+    <span
+      class="flex items-center sm:text-base md:text-base lg:text-base font-montserrat font-bold text-Verdana underline">
+      {{ dataSectionText.associateProducts }}
+    </span>
+  </div>
+  <span class="flex justify-end w-[40%] sm:w-[30%] md:w-[25%] lg:w-[29%] max-w-full">
+    <img src="/assets/img/Mask_Group_19@2x.png" alt="mask" class="h-12 sm:h-16 md:h-20 lg:h-auto max-w-full" />
+  </span>
+</div>

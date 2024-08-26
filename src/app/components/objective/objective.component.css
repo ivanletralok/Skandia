@@ -1,0 +1,16 @@
+.background {
+  background-color: rgb(55 135 148);
+}
+
+
+.imgback {
+  background-position: bottom;
+}
+
+@media (max-width: 320px) {
+  .sm-resp{
+    margin-top: -240px;
+  }
+}
+
+

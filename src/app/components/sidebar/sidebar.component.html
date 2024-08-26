@@ -1,0 +1,21 @@
+<nav [ngClass]="{ 'w-16': !isSidebarOpen, 'w-64': isSidebarOpen }"
+  class="h-screen top-16 bg-grays-101 text-white flex fixed flex-col left-0 duration-300 z-30">
+  <div class="flex items-center h-16 bg-Verdana px-4 cursor-pointer">
+    <button (click)="toggleSidebar()" class="p-2">
+      <img src="/assets/img/home.svg" alt="home" class="w-4 h-4" />
+    </button>
+    <a (click)="toggleSidebar()" *ngIf="isSidebarOpen" class="ml-4 text-lg">
+      Inicio
+    </a>
+  </div>
+
+  <ul class="flex-1 mt-4">
+    <li *ngFor="let item of menuItems" class="flex items-center">
+      <a
+        class="flex items-center py-2.5 px-4 cursor-pointer text-grays-100 font-montserrat hover:bg-Verdana hover:text-white w-full">
+        <img src="{{ item.icon }}" alt="dashboard" class="w-4 h-4 hover:bg-white" />
+        <span *ngIf="isSidebarOpen" class="ml-4">{{ item.name }}</span>
+      </a>
+    </li>
+  </ul>
+</nav>

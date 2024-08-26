@@ -1,0 +1,41 @@
+<div class="flex flex-col lg:flex-row justify-center font-medium bg-custom-blue m-0 p-4" *ngIf="showBanner">
+  <div
+    class="text-center lg:text-left lg:p-32 lg:text-3xl  font-montserrat font-bold flex flex-col justify-center items-center lg:items-start lg:w-1/2">
+    <p class="text-custom-black"> {{ recommendationText.line1 }}</p>
+    <p class="text-custom-black">
+      {{ recommendationText.line2 }}
+      <span class="text-orange-400">{{ recommendationText.highlight }}</span>
+    </p>
+    <p class="text-orange-400">{{ recommendationText.closing }}</p>
+  </div>
+
+  <div class="lg:mt-0 lg:ml-4 max-w-sm mx-auto bg-white rounded-lg shadow-lg overflow-hidden lg:w-1/2">
+    <div class="relative">
+      <img class="w-full object-cover" [src]="cardText.img" [alt]="cardText.imageAlt">
+      <div
+        class="absolute top-4 left-4 bg-custom-blue font-Verdana font-bold text-custom-black text-xs rounded-sm px-2 py-1">
+        {{ cardText.category }}
+      </div>
+    </div>
+
+    <div class="lg:p-6 p-4 font-montserrat text-custom-black text-base lg:text-lg">
+      <p>{{ cardText.content.line1 }}</p>
+      <p class="font-bold">{{ cardText.content.line2 }}</p>
+      <p class="font-bold text-Verdana text-base underline lg:pt-4">{{ cardText.content.linkText }}</p>
+    </div>
+
+    <div class="lg:p-6 p-4 text-xs lg:text-sm font-Verdana">
+      <span class="flex gap-2 items-center mb-2">
+        <img src="/assets/img/world.svg" alt="world" class="w-4 h-4">
+        <p>{{ cardText.footer.line1.text }}</p>
+        <p class="font-bold">{{ cardText.footer.line1.boldText }}</p>
+      </span>
+      <span class="flex gap-2 items-center">
+        <img src="/assets/img/profile.svg" alt="profile" class="w-4 h-4">
+        <p class="font-bold">{{ cardText.footer.line2.boldText }}</p>
+        <p>{{ cardText.footer.line2.text }}</p>
+      </span>
+    </div>
+
+  </div>
+</div>

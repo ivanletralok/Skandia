@@ -1,0 +1,36 @@
+<header class="header flex items-center justify-between w-full px-5 py-4 z-40">
+  <div class="flex items-center mr-16 cursor-pointer md:hidden" (click)="sidebarOpen = !sidebarOpen">
+    <div class="flex flex-col space-y-1">
+      <div class="w-6 h-1 bg-Verdana"></div>
+      <div class="w-6 h-1 bg-Verdana"></div>
+      <div class="w-6 h-1 bg-Verdana"></div>
+    </div>
+  </div>
+
+  <div class="flex items-center gap-2 mr-4">
+    <img src="/assets/img/Group_123.svg" alt="Logo" class="w-32 h-auto bg-contain">
+    <p class="font-bold text-custom-black font-montserrat h-6">|</p>
+    <div>
+      <p class="md:text-lg font-montserrat text-custom-black font-semibold hidden md:flex">
+        {{ headerText.financialPlan }}</p>
+    </div>
+  </div>
+
+  <div class="flex items-center space-x-4 ml-auto mr-14 hidden md:flex">
+    <span class="flex items-center space-x-2">
+      <img src="/assets/img/Happy.svg" alt="happy" class="w-6 h-6">
+      <span class="underline font-bold font-Verdana text-Verdana text-sm">{{ headerText.financialPlanner }}</span>
+    </span>
+    <span class="flex items-center space-x-2">
+      <img src="/assets/img/hand3.svg" alt="happy" class="w-6 h-6">
+      <span class="underline font-extrabold font-Verdana text-Verdana text-sm">{{ headerText.contributions }}</span>
+    </span>
+    <span class="flex items-center space-x-2">
+      <img src="/assets/img/comp_faq.svg" alt="faq" class="w-8 h-8">
+    </span>
+  </div>
+</header>
+
+<div class="md:block" [ngClass]="{'hidden': !sidebarOpen}">
+  <app-sidebar [isSidebarOpen]="sidebarOpen"></app-sidebar>
+</div>
